@@ -1,1 +1,5 @@
-CREATE DATABASE '게시판' CHARACTER SET utf8 COLLATE utf8_general_ci;
+use exampledb;
+CREATE TABLE users(
+    username varchar(20) NOT NULL,
+    password varchar(20) NOT NULL
+    ) ENGINE = innodb;
