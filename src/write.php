@@ -1,5 +1,9 @@
 <?php
 session_start();
+if (!isset($_SESSION['is_login']) || !$_SESSION['is_login']) {
+    header("Location: login.php");
+    exit;
+}
 date_default_timezone_set("Asia/Seoul");
 $con = mysqli_connect('db', 'exampleuser', 'examplepass', 'exampledb');
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
